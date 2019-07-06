@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<SplitPane dividerPositions="0.22110552763819097" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="317.0" prefWidth="383.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ConDBController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <Label layoutX="110.0" layoutY="18.0" prefHeight="27.0" prefWidth="127.0" text="连接新数据库">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <Label layoutX="7.0" layoutY="27.0" prefHeight="20.0" prefWidth="90.0" text="数据库名称:" />
+            <TextField fx:id="DBname" layoutX="108.0" layoutY="22.0" />
+            <Label layoutX="7.0" layoutY="62.0" prefHeight="20.0" prefWidth="113.0" text="数据库用户名：" />
+            <Label layoutX="7.0" layoutY="105.0" prefHeight="20.0" prefWidth="90.0" text="数据库密码：" />
+            <TextField fx:id="DBuser" layoutX="108.0" layoutY="57.0" />
+            <PasswordField fx:id="DBpass" layoutX="108.0" layoutY="106.0" />
+            <Button fx:id="yButton" layoutX="135.0" layoutY="155.0" mnemonicParsing="false" onAction="#modifyAction" onKeyReleased="#modPress" text="确定" />
+            <Button fx:id="nButton" layoutX="232.0" layoutY="155.0" mnemonicParsing="false" onAction="#returnAction" onKeyReleased="#retPress" text="返回" />
+            
+         </children></AnchorPane>
+  </items>
+</SplitPane>

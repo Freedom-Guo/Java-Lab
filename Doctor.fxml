@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<SplitPane dividerPositions="0.1934673366834171" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DocController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <Label contentDisplay="CENTER" layoutX="234.0" layoutY="17.0" prefHeight="40.0" prefWidth="118.0" text="医 生 界 面" textAlignment="CENTER">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="Timelabel" layoutX="14.0" layoutY="7.0" prefHeight="20.0" prefWidth="152.0" text="Label" />
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <TabPane layoutY="-1.0" prefHeight="324.0" prefWidth="598.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab fx:id="BRLB" onSelectionChanged="#selectBRLB" text="病人列表">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="BRtable" layoutX="-5.0" layoutY="-6.0" prefHeight="277.0" prefWidth="598.0">
+                                <columns>
+                                  <TableColumn fx:id="brghbh" prefWidth="126.0" text="挂号编号" />
+                                  <TableColumn fx:id="brbrmc" minWidth="5.0" prefWidth="123.0" text="病人名称" />
+                                    <TableColumn fx:id="brghrq" prefWidth="188.0" text="挂号日期" />
+                                    <TableColumn fx:id="brhzlb" prefWidth="160.0" text="号种类别" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab fx:id="SRLB" onSelectionChanged="#selectSRLB" text="收入列表">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="SRtable" prefHeight="274.0" prefWidth="598.0">
+                                <columns>
+                                  <TableColumn fx:id="srksmc" prefWidth="97.0" text="科室名称" />
+                                  <TableColumn fx:id="srysbh" prefWidth="91.0" text="医生编号" />
+                                    <TableColumn fx:id="srysmc" prefWidth="89.0" text="医生名称" />
+                                    <TableColumn fx:id="srhzlb" prefWidth="120.0" text="号种类别" />
+                                    <TableColumn fx:id="srghrc" prefWidth="90.0" text="挂号人次" />
+                                    <TableColumn fx:id="srsrhj" prefWidth="110.0" text="收入合计" />
+                                </columns>
+                              </TableView>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab fx:id="SZSJ" text="设置时间与退出">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="startTime" layoutX="33.0" layoutY="114.0" prefHeight="40.0" prefWidth="243.0" promptText="例：2018-01-01 0:0:0" />
+                              <TextField fx:id="endTime" layoutX="317.0" layoutY="114.0" prefHeight="40.0" prefWidth="243.0" promptText="例：2018-05-01 23:59:59" />
+                              <Label layoutX="282.0" layoutY="107.0" prefHeight="40.0" prefWidth="35.0" text="~">
+                                 <font>
+                                    <Font size="43.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="36.0" layoutY="73.0" prefHeight="34.0" prefWidth="100.0" text="开始时间">
+                                 <font>
+                                    <Font size="23.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="466.0" layoutY="80.0" prefHeight="34.0" prefWidth="93.0" text="结束时间">
+                                 <font>
+                                    <Font size="23.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="setbutton" layoutX="204.0" layoutY="185.0" mnemonicParsing="false" onAction="#sclicked" text="保存" />
+                              <Button fx:id="exitbutton" layoutX="320.0" layoutY="185.0" mnemonicParsing="false" onAction="#cclicked" text="退出" />
+                              <Label layoutX="62.0" layoutY="14.0" prefHeight="31.0" prefWidth="476.0" text="不设置时，收入列表默认时间为当天0:0:0开始至当前时刻">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

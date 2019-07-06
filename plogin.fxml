@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="480.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Lcontroller">
+   <children>
+      <SplitPane dividerPositions="0.21765913757700206" layoutX="-4.0" layoutY="-4.0" orientation="VERTICAL" prefHeight="489.0" prefWidth="601.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="102.0" prefWidth="599.0">
+               <children>
+                  <Label layoutX="105.0" layoutY="26.0" text="欢迎使用医院挂号系统" textAlignment="CENTER">
+                     <font>
+                        <Font size="39.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Label layoutX="73.0" layoutY="99.0" text="编号    ：">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="70.0" layoutY="175.0" text="密码     ：">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="numinput" layoutX="160.0" layoutY="97.0" prefHeight="30.0" prefWidth="326.0" promptText="请输入自己的编号" />
+                   <PasswordField fx:id="passwordin" layoutX="160.0" layoutY="174.0" prefHeight="30.0" prefWidth="326.0" promptText="请输入自己的密码" />
+                  <Button fx:id="loginbutton1" layoutX="160.0" layoutY="250.0" mnemonicParsing="false" onAction="#ploginAction" text="病人登录" />
+                  <Button fx:id="exitbutton" layoutX="428.0" layoutY="250.0" mnemonicParsing="false" onAction="#exitAction" text="退出" />
+                  <Button fx:id="loginbutton2" layoutX="283.0" layoutY="250.0" mnemonicParsing="false" onAction="#dloginAction" text="医生登录" />
+                  <Label fx:id="label" layoutX="160.0" layoutY="24.0" prefHeight="50.0" prefWidth="326.0" text="输入后鼠标点击或按下空格表示选择" />
+                  <Button fx:id="DBbutton" layoutX="478.0" layoutY="333.0" mnemonicParsing="false" onAction="#DBAction" text="连接新数据库" />
+                 
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
